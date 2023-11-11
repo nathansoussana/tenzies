@@ -9,12 +9,14 @@ $white: #FFFFFF
 $green: #59E391
 $gray: #F5F5F5
 
-// General styles
+// General
 *
   box-sizing: border-box
+  font-family: 'Karla', sans-serif
 
 body
   margin: 0
+  padding: 20px
   background: $dark-bgd
   display: flex
   justify-content: center
@@ -22,8 +24,27 @@ body
   height: 100vh
 
 main
-  width: 320px
+  max-width: 100%
   aspect-ratio: 1
   padding: 35px
   border-radius: 10px
   background: $gray
+
+// Die
+.dice-container
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  grid-gap: 18px
+
+.die
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 50px
+  aspect-ratio: 1
+  border-radius: 4px
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15)
+  background: $white
+  font-size: 2em
+  font-weight: 700
+  color: $dark-txt
