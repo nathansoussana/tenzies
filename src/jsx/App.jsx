@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Die from './components/Die'
+import Button from './components/Button'
 
 export default function App() {
   const [dice, setDice] = useState(allNewDice())
@@ -9,6 +10,10 @@ export default function App() {
     return dice
   }
 
+  function handleClick() {
+    setDice(allNewDice())
+  }
+
   const diceHand = dice.map((die, index) => <Die key={index} value={die} />)
 
   return (
@@ -16,6 +21,7 @@ export default function App() {
       <div className="dice-container">
         {diceHand}
       </div>
+      <Button text="Roll" onClick={handleClick} />
     </main>
   )
 }
