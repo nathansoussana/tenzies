@@ -40,7 +40,6 @@ main {
   aspect-ratio: 1;
   border-radius: 4px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
-  background: #FFFFFF;
   font-size: 1.75em;
   font-weight: 700;
   color: #2B283A;
@@ -57,6 +56,10 @@ main {
   border-radius: 4px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  user-select: none;
+}
+.btn:active {
+  background: #4A4E74;
 }
 
 /*# sourceMappingURL=styles.css.map */

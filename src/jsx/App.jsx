@@ -6,7 +6,9 @@ export default function App() {
   const [dice, setDice] = useState(allNewDice())
 
   function allNewDice() {
-    const dice = Array.from({ length: 10 }, (die) => ({ value: Math.ceil(Math.random(die) * 6), isHeld: false }))
+    const dice = Array.from(
+      { length: 10 }, (die) => ({ value: Math.ceil(Math.random(die) * 6), isHeld: false })
+    )
     return dice
   }
 
@@ -14,7 +16,14 @@ export default function App() {
     setDice(allNewDice())
   }
 
-  const diceHand = dice.map((die, index) => <Die key={index} value={die.value} />)
+  function holdDie(id) {
+    setDice(oldDice => oldDice.map((die, index) => index === id ? {...die, isHeld: !die.isHeld} : die))
+  }
+
+  const diceHand = dice.map((die, index) => (
+      <Die key={index} value={die.value} isHeld={die.isHeld} onClick={() => holdDie(index)} />
+    )
+  )
 
   return (
     <main>
