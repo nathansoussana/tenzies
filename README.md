@@ -1,8 +1,7 @@
-# React + Vite
+# Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Tenzies game built with React and SASS.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img width="400" alt="Screenshot 2023-11-14 at 15 18 02" src="https://github.com/nathansoussana/tenzies/assets/85996279/640a50e3-d475-4702-b9e2-5ac744bdb2c9">
+<img width="400" alt="Screenshot 2023-11-14 at 15 18 53" src="https://github.com/nathansoussana/tenzies/assets/85996279/8877b619-b6ba-4c2f-a8c5-a86ae3c95a7d">
+<img width="400" alt="Screenshot 2023-11-14 at 15 19 18" src="https://github.com/nathansoussana/tenzies/assets/85996279/cd0e3f98-369b-4253-a51a-b36deafa37e9">
