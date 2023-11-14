@@ -3,5 +3,9 @@ export default function Die({ isHeld, onClick, value }) {
     backgroundColor: isHeld ? "#59E391" : "white"
   }
   
-  return <div style={styles} className="die" onClick={onClick}>{value}</div>
+  return (
+    <div style={styles} className="die" onClick={onClick}>
+      {value}
+    </div>
+  )
 }
