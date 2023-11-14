@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: "Karla", sans-serif;
+  margin: 0;
 }
 
 body {
@@ -16,14 +17,28 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 30px;
-  justify-content: center;
   align-items: center;
   max-width: 100%;
   aspect-ratio: 1;
-  padding: 35px;
+  padding: 60px;
   border-radius: 10px;
   background: #F5F5F5;
+}
+
+.title {
+  font-size: 2em;
+  color: #2B283A;
+}
+
+.instructions {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  color: #4A4E74;
+  font-weight: 400;
+  max-width: 340px;
+  text-align: center;
 }
 
 .dice-container {

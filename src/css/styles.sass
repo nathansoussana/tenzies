@@ -13,6 +13,7 @@ $gray: #F5F5F5
 *
   box-sizing: border-box
   font-family: 'Karla', sans-serif
+  margin: 0
 
 body
   margin: 0
@@ -26,14 +27,27 @@ body
 main
   display: flex
   flex-direction: column
+  justify-content: space-between
   gap: 30px
-  justify-content: center
   align-items: center
   max-width: 100%
   aspect-ratio: 1
-  padding: 35px
+  padding: 60px
   border-radius: 10px
   background: $gray
+
+// Text
+.title
+  font-size: 2em
+  color: $dark-txt
+
+.instructions
+  font-family: 'Inter', sans-serif
+  font-size: 1em
+  color: $purple-txt
+  font-weight: 400
+  max-width: 340px
+  text-align: center
 
 // Die
 .dice-container
