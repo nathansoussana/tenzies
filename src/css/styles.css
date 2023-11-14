@@ -87,6 +87,9 @@ main {
   .dice-container {
     grid-gap: 9px;
   }
+  .btn {
+    padding: 15px 60px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
