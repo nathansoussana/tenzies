@@ -6,25 +6,29 @@ import Button from './components/Button'
 export default function App() {
   const [dice, setDice] = useState(allNewDice())
 
+  function generateNewDie() {
+    return {
+      value: Math.ceil(Math.random() * 6), 
+      isHeld: false,
+      id: nanoid
+    }
+  }
+
   function allNewDice() {
     const dice = Array.from(
       { length: 10 }, 
-      (die) => (
-        { 
-          value: Math.ceil(Math.random(die) * 6), 
-          isHeld: false ,
-          id: nanoid
-        }
-      )
+      () => (generateNewDie())
     )
     return dice
   }
 
   function rollDice() {
-    setDice(allNewDice())
+    setDice(oldDice => oldDice.map(die => (
+      die.isHeld ? die : generateNewDie()
+    )))
   }
 
-  function holdDie(id) {
+  function holdDice(id) {
     setDice(oldDice => (
       oldDice.map((die, index) => (
         index === id ? {...die, isHeld: !die.isHeld} : die))
@@ -37,7 +41,7 @@ export default function App() {
         key={index} 
         value={die.value} 
         isHeld={die.isHeld} 
-        onClick={() => holdDie(index)} 
+        onClick={() => holdDice(index)} 
       />
     )
   )
